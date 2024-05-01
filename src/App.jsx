@@ -4,7 +4,7 @@ import './App.css';
 import TodoList from './components/TodoList';
 import { DarkModeContext } from './context/DarkModeContext';
 
-export default function AppTodo() {
+export default function App() {
     const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext);
 
     const getInitialTodo = () => {
@@ -30,7 +30,10 @@ export default function AppTodo() {
 
     // Add
     const addTodoList = () => {
-        if (input === '') return;
+        if (input.trim() === '') {
+            setInput('');
+            return;
+        }
         const id = randomId();
         setTodoItem((prev) => ({ ...prev, active: [...prev.active, { id, value: input }] }));
         setInput('');
