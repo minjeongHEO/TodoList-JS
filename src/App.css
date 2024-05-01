@@ -1,42 +1,115 @@
+body {
+    background: var(--bg-gradient);
+    color: var(--font-color);
+    &.light {
+        --bg-gradient: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+        --bg-color: #e9e7fa;
+        --bg-list-color: #ffffff;
+        --bg-shadow: rgba(60, 60, 66, 0.2);
+        --font-color: #333333;
+    }
+    &.dark {
+        --bg-gradient: linear-gradient(90deg, rgba(54, 39, 45, 1) 0%, rgba(64, 81, 99, 1) 100%);
+        --bg-color: #323237;
+        --bg-list-color: #424242;
+        --bg-shadow: rgba(0, 0, 0, 0.5);
+        --font-color: #fefefe;
+    }
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    display: flex; /* Flexbox 레이아웃 사용 */
+    flex-direction: column; /* 자식 요소들을 세로 방향으로 정렬 */
+    justify-content: center; /* 세로 방향으로 중앙 정렬 */
+    align-items: center; /* 가로 방향으로 중앙 정렬 */
+    height: 100vh; /* 뷰포트의 전체 높이 */
+    max-width: 1280px;
+    min-width: 358px;
+    margin: 0 auto; /* 좌우 중앙 정렬 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    /* background-color: burlywood; */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+li {
+    list-style: none;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+nav {
+    align-content: center;
+    height: 10%;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    & > * {
+        align-content: center;
+    }
+}
+.pointer_cursor {
+    cursor: pointer;
+}
+.darkmode_icon {
+    height: 100%;
+    vertical-align: middle;
+}
+.strike-through {
+    text-decoration: line-through;
+    color: darkgray;
+}
+.selected {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+    border-radius: 10px;
+    width: 50vw;
+    min-width: 530px;
+    min-height: 450px;
+    height: 50vh;
+    min-height: 350px;
+    background-color: var(--bg-color);
+    box-shadow: var(--bg-shadow) 11px 10px 16px 13px;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    height: 88%;
+    width: 100%;
+
+    & li {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+
+        line-height: 170%;
+        align-items: center;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.main_list {
+    background-color: var(--bg-list-color);
+    height: 80%;
+    overflow: auto;
+    padding: 20px;
+}
+.main_list::-webkit-scrollbar {
+    width: 7px;
+}
+.main_list::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: #e9e7fa;
+    box-shadow: var(--bg-shadow) 0px 25px 50px -12px;
 }
 
-.card {
-  padding: 2em;
-}
+.input_container {
+    height: 6%;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
 
-.read-the-docs {
-  color: #888;
+    & input {
+        width: 50%;
+    }
 }
