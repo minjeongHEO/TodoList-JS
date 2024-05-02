@@ -4,7 +4,7 @@
 
 # 배포 : Vercel
 
-`yarn add -D vercel`
+$ `yarn add -D vercel`
 
 ```json
 "scripts": {
@@ -12,7 +12,7 @@
 }
 ```
 
-`yarn deploy`
+$ `yarn deploy`
 
 ---
 
@@ -29,16 +29,19 @@
 
 ### 아이콘 사용하기 ([React Icons](https://www.npmjs.com/package/react-icons))
 
-`yarn add react-icons`  
-[아이콘 고르기](https://primer.style/foundations/icons)
+1. $ `yarn add react-icons`
+
+2. <i>[🎨아이콘 고르기](https://primer.style/foundations/icons)</i>
 
 ### 고유한 아이디 라이브러리 (uuid)
 
--   [npm](https://www.npmjs.com/package/uuid)  
-    `npm install uuid`
+<i>[🔍참조 사이트](https://inpa.tistory.com/entry/NODE-%F0%9F%93%9A-UUID-%EB%AA%A8%EB%93%88)</i>
 
--   [yarn](https://classic.yarnpkg.com/en/package/uuid.v4)  
-    `yarn add uuid`
+-   [npm](https://www.npmjs.com/package/uuid)  
+    $ `npm install uuid`
+
+-   [yarn](https://classic.yarnpkg.com/en/package/uuid)  
+    $ `yarn add uuid`
 
 ```js
 import { v4 as uuidv4 } from 'uuid';
