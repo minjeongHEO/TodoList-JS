@@ -7,24 +7,24 @@ export default function TodoList({ todoItem, setTodoItem, type }) {
     if (!items || items.length === 0) return null;
 
     const deleteItem = (targetId) => {
-        if (todoItem.active.some(({ id }) => id === targetId)) {
-            setTodoItem((prev) => ({ ...prev, active: prev.active.filter(({ id }) => id !== targetId) }));
+        if (todoItem.Active.some(({ id }) => id === targetId)) {
+            setTodoItem((prev) => ({ ...prev, Active: prev.Active.filter(({ id }) => id !== targetId) }));
             return;
         }
 
-        setTodoItem((prev) => ({ ...prev, completed: prev.completed.filter(({ id }) => id !== targetId) }));
+        setTodoItem((prev) => ({ ...prev, Completed: prev.Completed.filter(({ id }) => id !== targetId) }));
     };
 
     const toCompleted = (targetId, targetValue) => {
         setTodoItem((prev) => ({
-            active: prev.active.filter(({ id }) => id !== targetId),
-            completed: [...prev.completed, { id: targetId, value: targetValue }],
+            Active: prev.Active.filter(({ id }) => id !== targetId),
+            Completed: [...prev.Completed, { id: targetId, value: targetValue }],
         }));
     };
     const toActive = (targetId, targetValue) => {
         setTodoItem((prev) => ({
-            active: [...prev.active, { id: targetId, value: targetValue }],
-            completed: prev.completed.filter(({ id }) => id !== targetId),
+            Active: [...prev.Active, { id: targetId, value: targetValue }],
+            Completed: prev.Completed.filter(({ id }) => id !== targetId),
         }));
     };
     // 체크박스
@@ -44,9 +44,9 @@ export default function TodoList({ todoItem, setTodoItem, type }) {
                         id={activeItem.id}
                         value={activeItem.value}
                         onChange={changeCheckBox}
-                        checked={type === 'completed' ? true : false}
+                        checked={type === 'Completed' ? true : false}
                     />
-                    <span className={type === 'completed' ? 'strike-through' : ''}>{activeItem.value}</span>
+                    <span className={type === 'Completed' ? 'strike-through' : ''}>{activeItem.value}</span>
                     <FaTrashAlt className="pointer_cursor" onClick={() => deleteItem(activeItem.id)} />
                 </li>
             ))}
