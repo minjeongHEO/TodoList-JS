@@ -36,6 +36,8 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:c4e7bc7eee6f5f7ff81d40fab8833487a7ecf0c520dc8460a81c1d4cd7e7994f8bdfe644c8a2230e1f66b40e2d053129123d1b4a5a1ff6c8f7a73251b931fc18#npm:18.3.1"],\
           ["react-icons", "virtual:c4e7bc7eee6f5f7ff81d40fab8833487a7ecf0c520dc8460a81c1d4cd7e7994f8bdfe644c8a2230e1f66b40e2d053129123d1b4a5a1ff6c8f7a73251b931fc18#npm:5.2.0"],\
+          ["uuid", "npm:9.0.1"],\
+          ["uuid.v4", "npm:1.0.0"],\
           ["vercel", "npm:34.1.7"],\
           ["vite", "virtual:c4e7bc7eee6f5f7ff81d40fab8833487a7ecf0c520dc8460a81c1d4cd7e7994f8bdfe644c8a2230e1f66b40e2d053129123d1b4a5a1ff6c8f7a73251b931fc18#npm:5.2.10"]\
         ],\
@@ -6021,6 +6023,8 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:c4e7bc7eee6f5f7ff81d40fab8833487a7ecf0c520dc8460a81c1d4cd7e7994f8bdfe644c8a2230e1f66b40e2d053129123d1b4a5a1ff6c8f7a73251b931fc18#npm:18.3.1"],\
           ["react-icons", "virtual:c4e7bc7eee6f5f7ff81d40fab8833487a7ecf0c520dc8460a81c1d4cd7e7994f8bdfe644c8a2230e1f66b40e2d053129123d1b4a5a1ff6c8f7a73251b931fc18#npm:5.2.0"],\
+          ["uuid", "npm:9.0.1"],\
+          ["uuid.v4", "npm:1.0.0"],\
           ["vercel", "npm:34.1.7"],\
           ["vite", "virtual:c4e7bc7eee6f5f7ff81d40fab8833487a7ecf0c520dc8460a81c1d4cd7e7994f8bdfe644c8a2230e1f66b40e2d053129123d1b4a5a1ff6c8f7a73251b931fc18#npm:5.2.10"]\
         ],\
@@ -6328,6 +6332,22 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../Users/heominjeong/AppData/Local/Yarn/Berry/cache/uuid-npm-3.3.2-62715051ac-10c0.zip/node_modules/uuid/",\
         "packageDependencies": [\
           ["uuid", "npm:3.3.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:9.0.1", {\
+        "packageLocation": "../../../Users/heominjeong/AppData/Local/Yarn/Berry/cache/uuid-npm-9.0.1-39a8442bc6-10c0.zip/node_modules/uuid/",\
+        "packageDependencies": [\
+          ["uuid", "npm:9.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["uuid.v4", [\
+      ["npm:1.0.0", {\
+        "packageLocation": "../../../Users/heominjeong/AppData/Local/Yarn/Berry/cache/uuid.v4-npm-1.0.0-e896cd26e8-10c0.zip/node_modules/uuid.v4/",\
+        "packageDependencies": [\
+          ["uuid.v4", "npm:1.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\

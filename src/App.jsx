@@ -3,6 +3,7 @@ import { CgDarkMode } from 'react-icons/cg';
 import './App.css';
 import TodoList from './components/TodoList';
 import { DarkModeContext } from './context/DarkModeContext';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function App() {
     const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext);
@@ -25,16 +26,14 @@ export default function App() {
         setInput(value);
     };
 
-    // 랜덤id생성
-    const randomId = () => (new Date().getTime() + Math.floor(Math.random() * 10)).toString();
-
     // Add
     const addTodoList = () => {
         if (input.trim() === '') {
             setInput('');
             return;
         }
-        const id = randomId();
+        // const id = randomId();
+        const id = uuidv4();
         setTodoItem((prev) => ({ ...prev, active: [...prev.active, { id, value: input }] }));
         setInput('');
     };
