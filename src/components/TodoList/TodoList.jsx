@@ -40,6 +40,7 @@ export default function TodoList({ todoItem, setTodoItem, type }) {
             {items.map((activeItem) => (
                 <li key={activeItem.id}>
                     <input
+                        className="check_btn"
                         type="checkbox"
                         id={activeItem.id}
                         value={activeItem.value}

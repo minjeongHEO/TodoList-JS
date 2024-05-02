@@ -4,6 +4,7 @@ body {
     &.light {
         --bg-gradient: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
         --bg-color: #e9e7fa;
+        --bg-color-btn: #c4beff;
         --bg-list-color: #ffffff;
         --bg-shadow: rgba(60, 60, 66, 0.2);
         --font-color: #333333;
@@ -11,6 +12,7 @@ body {
     &.dark {
         --bg-gradient: linear-gradient(90deg, rgba(54, 39, 45, 1) 0%, rgba(64, 81, 99, 1) 100%);
         --bg-color: #323237;
+        --bg-color-btn: #5c5c67;
         --bg-list-color: #424242;
         --bg-shadow: rgba(0, 0, 0, 0.5);
         --font-color: #fefefe;
@@ -27,7 +29,6 @@ body {
     min-width: 358px;
     margin: 0 auto; /* 좌우 중앙 정렬 */
     text-align: center; /* 텍스트 중앙 정렬 */
-    /* background-color: burlywood; */
 }
 
 li {
@@ -41,6 +42,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-size: 1.2rem;
 
     & > * {
         align-content: center;
@@ -48,6 +50,10 @@ nav {
 }
 .pointer_cursor {
     cursor: pointer;
+    opacity: 0.8;
+}
+.pointer_cursor:hover {
+    opacity: 1;
 }
 .darkmode_icon {
     height: 100%;
@@ -58,12 +64,18 @@ nav {
     color: darkgray;
 }
 .selected {
-    text-decoration: underline;
     font-weight: bold;
+    opacity: 1;
+}
+.selected::after {
+    content: '';
+    display: block;
+    margin-top: 0.2rem;
+    border: 1px solid var(--font-color);
 }
 
 .container {
-    border-radius: 10px;
+    border-radius: 1rem;
     width: 50vw;
     min-width: 530px;
     min-height: 450px;
@@ -82,9 +94,12 @@ main {
         width: 95%;
         display: flex;
         justify-content: space-between;
-
         line-height: 170%;
         align-items: center;
+        opacity: 0.8;
+    }
+    & li:hover {
+        opacity: 1;
     }
 }
 
@@ -93,6 +108,9 @@ main {
     height: 80%;
     overflow: auto;
     padding: 20px;
+}
+.check_btn {
+    cursor: pointer;
 }
 .main_list::-webkit-scrollbar {
     width: 7px;
@@ -104,12 +122,30 @@ main {
 }
 
 .input_container {
-    height: 6%;
+    height: 8%;
     display: flex;
     justify-content: center;
-    margin-top: 12px;
+    margin-top: 10px;
 
     & input {
         width: 50%;
+        border: none;
+        outline: none;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
     }
+}
+.add_btn {
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-color: var(--bg-color-btn);
+    color: var(--font-color);
+    font-weight: bold;
+    padding: 0 1rem;
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.add_btn:hover {
+    filter: brightness(110%);
 }

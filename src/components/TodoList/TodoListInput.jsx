@@ -28,7 +28,9 @@ export default function TodoListInput({ setTodoItem }) {
         <>
             <div className="input_container">
                 <input type="text" onChange={handleChange} value={input} onKeyDown={(e) => activeEnter(e)} placeholder="📓 MY TODO LIST"></input>
-                <button onClick={addTodoList}>Add</button>
+                <button className="add_btn" onClick={addTodoList}>
+                    Add
+                </button>
             </div>
         </>
     );
