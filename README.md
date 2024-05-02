@@ -37,13 +37,9 @@
 -   [npm](https://www.npmjs.com/package/uuid)  
     `npm install uuid`
 
+-   [yarn](https://classic.yarnpkg.com/en/package/uuid.v4)  
+    `yarn add uuid`
+
 ```js
 import { v4 as uuidv4 } from 'uuid';
-```
-
--   [yarn](https://classic.yarnpkg.com/en/package/uuid.v4)  
-    `yarn add uuid.v4`
-
-```js
-import { v4 as uuidv4 } from 'uuid.v4';
 ```
