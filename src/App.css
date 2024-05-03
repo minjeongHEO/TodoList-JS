@@ -2,6 +2,7 @@ body {
     background: var(--bg-gradient);
     color: var(--font-color);
     accent-color: var(--bg-color-btn);
+
     &.light {
         --bg-gradient: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
         --bg-color: #e9e7fa;
@@ -52,14 +53,18 @@ nav {
 .pointer_cursor {
     cursor: pointer;
     opacity: 0.8;
+    transition: all 150ms ease-out;
 }
 .pointer_cursor:hover {
     opacity: 1;
+    transition: scale(1.2);
 }
 .darkmode_icon {
+    font-size: 1.5rem;
     height: 100%;
     vertical-align: middle;
 }
+
 .strike-through {
     text-decoration: line-through;
     color: darkgray;
@@ -130,6 +135,7 @@ main {
 
     & input {
         width: 50%;
+        padding-left: 10px;
         border: none;
         outline: none;
         border-top-left-radius: 8px;
