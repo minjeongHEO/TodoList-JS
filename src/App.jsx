@@ -7,12 +7,12 @@ import { DarkModeProvider } from './context/DarkModeContext.jsx';
 
 const filters = ['All', 'Active', 'Completed'];
 
+const InitTodo = () => {
+    const savedTodo = localStorage.getItem('todoItem');
+    return savedTodo ? JSON.parse(savedTodo) : { Active: [], Completed: [] };
+};
 export default function App() {
-    const getInitialTodo = () => {
-        const savedTodo = localStorage.getItem('todoItem');
-        return savedTodo && savedTodo.Active ? JSON.parse(savedTodo) : { Active: [], Completed: [] };
-    };
-    const [todoItem, setTodoItem] = useState(getInitialTodo);
+    const [todoItem, setTodoItem] = useState(InitTodo());
     const [filterType, setFilterType] = useState('All');
 
     useEffect(() => {
