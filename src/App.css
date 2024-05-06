@@ -1,4 +1,14 @@
-body {
+#main {
+    display: flex; /* Flexbox 레이아웃 사용 */
+    flex-direction: column; /* 자식 요소들을 세로 방향으로 정렬 */
+    justify-content: center; /* 세로 방향으로 중앙 정렬 */
+    align-items: center; /* 가로 방향으로 중앙 정렬 */
+    height: 100vh; /* 뷰포트의 전체 높이 */
+    /* max-width: 1280px;
+    min-width: 358px; */
+    width: 100vw;
+    margin: 0 auto; /* 좌우 중앙 정렬 */
+    text-align: center; /* 텍스트 중앙 정렬 */
     background: var(--bg-gradient);
     color: var(--font-color);
     accent-color: var(--bg-color-btn);
@@ -19,18 +29,6 @@ body {
         --bg-shadow: rgba(0, 0, 0, 0.5);
         --font-color: #fefefe;
     }
-}
-
-#root {
-    display: flex; /* Flexbox 레이아웃 사용 */
-    flex-direction: column; /* 자식 요소들을 세로 방향으로 정렬 */
-    justify-content: center; /* 세로 방향으로 중앙 정렬 */
-    align-items: center; /* 가로 방향으로 중앙 정렬 */
-    height: 100vh; /* 뷰포트의 전체 높이 */
-    max-width: 1280px;
-    min-width: 358px;
-    margin: 0 auto; /* 좌우 중앙 정렬 */
-    text-align: center; /* 텍스트 중앙 정렬 */
 }
 
 li {

@@ -13,7 +13,6 @@ export function DarkModeProvider({ children }) {
         const darkModeType = isDarkMode ? 'dark' : 'light';
 
         localStorage.setItem('theme', darkModeType);
-        document.body.className = darkModeType;
     }, [isDarkMode]);
 
     const toggleDarkMode = () => setIsDarkMode((mode) => !mode);

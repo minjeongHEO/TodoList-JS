@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import TodoListMain from './components/TodoList/TodoListMain';
 import TodoListInput from './components/TodoList/TodoListInput';
-import { DarkModeProvider } from './context/DarkModeContext.jsx';
+import { DarkModeContext } from './context/DarkModeContext.jsx';
 
 const filters = ['All', 'Active', 'Completed'];
 
@@ -12,6 +12,7 @@ const InitTodo = () => {
     return savedTodo ? JSON.parse(savedTodo) : { Active: [], Completed: [] };
 };
 export default function App() {
+    const { isDarkMode } = useContext(DarkModeContext);
     const [todoItem, setTodoItem] = useState(InitTodo());
     const [filterType, setFilterType] = useState('All');
 
@@ -20,7 +21,7 @@ export default function App() {
     }, [todoItem]);
 
     return (
-        <DarkModeProvider>
+        <div id="main" className={isDarkMode ? 'dark' : 'light'}>
             <div className="container">
                 <Header filters={filters} filterType={filterType} setFilterType={setFilterType} />
                 <main>
@@ -28,6 +29,6 @@ export default function App() {
                     <TodoListInput setTodoItem={setTodoItem} />
                 </main>
             </div>
-        </DarkModeProvider>
+        </div>
     );
 }
